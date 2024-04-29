@@ -21,7 +21,7 @@ public class IsolationTest {
 
     // try with READ_COMMITTED (or with no isolation set)
     @Test
-    @Transactional(isolation = REPEATABLE_READ)
+    @Transactional//(isolation = REPEATABLE_READ)
     public void repeatableRead() {
         Item item = itemRepository.findAll().get(0);
         System.out.println(item.getHighestBid());
